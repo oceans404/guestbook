@@ -1,8 +1,14 @@
 # GuestBook
+
 <img width="1284" alt="Screen Shot 2022-10-06 at 10 18 55 AM" src="https://user-images.githubusercontent.com/91382964/194352210-44689a8b-d893-4cf0-8970-bbaa277960f9.png">
 
 - Live link: https://guestbook-blush.vercel.app/
 - Smart contract on Polygonscan Mumbai: https://mumbai.polygonscan.com/address/0xA676f2cC7D400D1DE8b20bbd8007ca0E7A4AF5e6
+
+## Contracts (for use in Remix)
+
+- starter guestbook contract: https://gist.github.com/oceans404/2c9e0a855c1492909220894252024a79
+- 🚀 completed guestbook contract: https://gist.github.com/oceans404/4a849c2774cddd3c0fe2d12caca610db
 
 ## Setup instructions
 
