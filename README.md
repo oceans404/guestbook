@@ -1,13 +1,29 @@
 # GuestBook
+<img width="1284" alt="Screen Shot 2022-10-06 at 10 18 55 AM" src="https://user-images.githubusercontent.com/91382964/194352210-44689a8b-d893-4cf0-8970-bbaa277960f9.png">
 
+- Live link: https://guestbook-blush.vercel.app/
+- Smart contract on Polygonscan Mumbai: https://mumbai.polygonscan.com/address/0xA676f2cC7D400D1DE8b20bbd8007ca0E7A4AF5e6
+
+- [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repo
+- git clone the fork locally
+- cd guestbook
 - `npm i`
 - `touch .env`
 - Within .env create a REACT_APP_ALCHEMY_ID variable 
-  - https://dashboard.alchemyapi.io/ "View Key" for a Polygon Mumbai Network app
+  - Visit the [Alchemy Dashboard](https://alchemy.com/?r=zU2MTQwNTU5Mzc2M) "View Key" for a Polygon Mumbai Network app
   - `REACT_APP_ALCHEMY_ID = 'yourAlchemyApiKey'`
   - `GENERATE_SOURCEMAP=false`
 - If you've created your own GuestBook contract, update your App.js file at `contractAddress` with your contract address
 - `npm start`
+
+## Deploy to Vercel
+- `git add .`
+- `git commit -m "updated contract address"`
+- `git push -u origin main`
+- Visit the [Vercel](https://vercel.com/) UI. 
+- Connect your Github and "Add new" selecting "Guestbook"
+- In "environment variables," add REACT_APP_ALCHEMY_ID with your alchemy key
+- Deploy!
 
 ## Available Scripts
 
