@@ -4,7 +4,9 @@
 - Live link: https://guestbook-blush.vercel.app/
 - Smart contract on Polygonscan Mumbai: https://mumbai.polygonscan.com/address/0xA676f2cC7D400D1DE8b20bbd8007ca0E7A4AF5e6
 
-- [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repo
+## Setup instructions
+
+- Star and [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repo
 - git clone the fork locally
 - cd guestbook
 - `npm i`
