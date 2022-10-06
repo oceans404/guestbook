@@ -10,6 +10,13 @@
 - starter guestbook contract: https://gist.github.com/oceans404/2c9e0a855c1492909220894252024a79
 - 🚀 completed guestbook contract: https://gist.github.com/oceans404/4a849c2774cddd3c0fe2d12caca610db
 
+## Pre-reqs
+
+- Download the [MetaMask browser extension](https://metamask.io/)
+- Create [a new test account](https://metamask.zendesk.com/hc/en-us/articles/360015289452-How-to-create-an-additional-account-in-your-wallet) on MetaMask even if you already have accounts. Always develop with a NEW test account!
+- Visit [Chainlist](https://chainlist.org/) and toggle testnets on. Search for the Polygon Mumbai network and click "connect wallet" to add it to your metamask networks
+- Send your new address some test matic from the [Polygon faucet](https://faucet.polygon.technology/)
+
 ## Setup instructions
 
 - Star and [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repo
