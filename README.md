@@ -12,17 +12,21 @@
 
 ## Pre-reqs
 
+- Install [node](https://nodejs.org/en/download/) and [nvm](https://github.com/nvm-sh/nvm) `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash`
+- set your node version `nvm use 16`
 - Download the [MetaMask browser extension](https://metamask.io/)
 - Create [a new test account](https://metamask.zendesk.com/hc/en-us/articles/360015289452-How-to-create-an-additional-account-in-your-wallet) on MetaMask even if you already have accounts. Always develop with a NEW test account!
+- Create an [alchemy account](https://alchemy.com/?r=zU2MTQwNTU5Mzc2M)
 - Visit [Chainlist](https://chainlist.org/) and toggle testnets on. Search for the Polygon Mumbai network and click "connect wallet" to add it to your metamask networks
 - Send your new address some test matic from the [Polygon faucet](https://faucet.polygon.technology/)
 
 ## Setup instructions
 
-- Star and [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repo
-- git clone the fork locally
+- start this repo
+- clone the repo. 
+- start this repo `git clone https://github.com/oceans404/guestbook`
 - cd guestbook
-- `npm i`
+- install dependencies `npm i --legacy-peer-deps`
 - `touch .env`
 - Within .env create a REACT_APP_ALCHEMY_ID variable 
   - Visit the [Alchemy Dashboard](https://alchemy.com/?r=zU2MTQwNTU5Mzc2M) "View Key" for a Polygon Mumbai Network app
