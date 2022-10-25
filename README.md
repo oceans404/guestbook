@@ -22,9 +22,8 @@
 
 ## Setup instructions
 
-- start this repo
-- clone the repo. 
-- start this repo `git clone https://github.com/oceans404/guestbook`
+- ⭐️ star this repo so you have it saved for future reference
+- clone the repo `git clone https://github.com/oceans404/guestbook`
 - cd guestbook
 - install dependencies `npm i --legacy-peer-deps`
 - `touch .env`
