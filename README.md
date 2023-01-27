@@ -5,6 +5,12 @@
 - Live link: https://guestbook-blush.vercel.app/
 - Smart contract on Polygonscan Mumbai: https://mumbai.polygonscan.com/address/0xA676f2cC7D400D1DE8b20bbd8007ca0E7A4AF5e6
 
+## Pre-reqs
+
+- Create a [Metamask account](https://metamask.io/)or create [a new test account](https://metamask.zendesk.com/hc/en-us/articles/360015289452-How-to-create-an-additional-account-in-your-wallet)
+- Add Polygon Mumbai Network to Metamask -- [Guide by Unstoppable Domains](https://docs.unstoppabledomains.com/manage-domains/guides/add-polygon-to-metamask/)
+- Get Mumbai Test Tokens from the [Polygon Faucet](https://faucet.polygon.technology/)
+
 ## Contracts (for use in Remix)
 
 [Guestbook Remix Workspace](https://remix.ethereum.org/#version=soljson-v0.8.7+commit.e28d00a7.js&optimize=true&runs=200&gist=c20a617f7ca794205a34d68f86a86140&evmVersion=null)
@@ -19,8 +25,6 @@ Navigate to the contracts folder to find the three Guestbook contracts.
 
 - Install [node](https://nodejs.org/en/download/) and [nvm](https://github.com/nvm-sh/nvm) `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash`
 - set your node version `nvm use 16`
-- Download the [MetaMask browser extension](https://metamask.io/)
-- Create [a new test account](https://metamask.zendesk.com/hc/en-us/articles/360015289452-How-to-create-an-additional-account-in-your-wallet) on MetaMask even if you already have accounts. Always develop with a NEW test account!
 - Create an [alchemy account](https://alchemy.com/?r=zU2MTQwNTU5Mzc2M)
 - Visit [Chainlist](https://chainlist.org/) and toggle testnets on. Search for the Polygon Mumbai network and click "connect wallet" to add it to your metamask networks
 - Send your new address some test matic from the [Polygon faucet](https://faucet.polygon.technology/)
