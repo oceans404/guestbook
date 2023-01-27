@@ -12,7 +12,8 @@ import Container from "@mui/material/Container";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
-import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
+import { configureChains, createClient, WagmiConfig } from "wagmi";
+import { polygonMumbai, polygon } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 import "./App.css";
@@ -22,17 +23,17 @@ import abi from "./contracts/Guestbook.json";
 const contractAddress = "0xA676f2cC7D400D1DE8b20bbd8007ca0E7A4AF5e6";
 const scannerAddress = `https://mumbai.polygonscan.com/address/${contractAddress}`;
 
-function App() {
+export function App() {
   const { chains, provider } = configureChains(
-    [chain.polygonMumbai, chain.polygon],
+    [polygonMumbai, polygon],
     [
-      alchemyProvider({ alchemyId: process.env.REACT_APP_ALCHEMY_ID }),
+      alchemyProvider({ apiKey: process.env.REACT_APP_ALCHEMY_ID }),
       publicProvider(),
     ]
   );
 
   const { connectors } = getDefaultWallets({
-    appName: "My RainbowKit App",
+    appName: "Guestbook",
     chains,
   });
 
@@ -137,6 +138,7 @@ function App() {
     addNewGuest();
   }
 
+  console.log(wagmiClient, chains);
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider chains={chains}>
@@ -195,11 +197,13 @@ function App() {
                 </Button>
               </form>
               {Object.values(guests) &&
-                Object.values(guests).map((g) => (
-                  <div key={g.dateString}>
-                    {g.dateString} <strong>{g.name}</strong>: {g.message}{" "}
-                  </div>
-                ))}
+                Object.values(guests)
+                  .reverse()
+                  .map((g) => (
+                    <div key={g.dateString}>
+                      {g.dateString} <strong>{g.name}</strong>: {g.message}{" "}
+                    </div>
+                  ))}
               <br />
               <a target="_blank" rel="noreferrer" href={scannerAddress}>
                 View smart contract on polyscan
@@ -211,5 +215,3 @@ function App() {
     </WagmiConfig>
   );
 }
-
-export default App;

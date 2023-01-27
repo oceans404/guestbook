@@ -7,10 +7,15 @@
 
 ## Contracts (for use in Remix)
 
-- starter guestbook contract: https://gist.github.com/oceans404/2c9e0a855c1492909220894252024a79
-- 🚀 completed guestbook contract: https://gist.github.com/oceans404/4a849c2774cddd3c0fe2d12caca610db
+[Guestbook Remix Workspace](https://remix.ethereum.org/#version=soljson-v0.8.7+commit.e28d00a7.js&optimize=true&runs=200&gist=c20a617f7ca794205a34d68f86a86140&evmVersion=null)
 
-## Pre-reqs
+Navigate to the contracts folder to find the three Guestbook contracts.
+
+- contracts > Guestbook.sol is a named "Guestbook" contract with no logic
+- contracts > Guestbook_Starter.sol is a completed starter Guestbook contract that stores a list of names (strings) of guests.
+- 🌟 contracts > Guestbook_Complex.sol is a completed complex Guestbook contract that stores a list of guests with info (name, message, date). Deploy this contract for use with the Guestbook frontend.
+
+## Frontend repo pre-reqs
 
 - Install [node](https://nodejs.org/en/download/) and [nvm](https://github.com/nvm-sh/nvm) `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash`
 - set your node version `nvm use 16`
@@ -25,14 +30,16 @@
 - ⭐️ star this repo so you have it saved for future reference
 - clone the repo `git clone https://github.com/oceans404/guestbook`
 - cd guestbook
-- install dependencies `npm i --legacy-peer-deps`
-- `touch .env`
-- Within .env create a REACT_APP_ALCHEMY_ID variable 
-  - Visit the [Alchemy Dashboard](https://alchemy.com/?r=zU2MTQwNTU5Mzc2M) "View Key" for a Polygon Mumbai Network app
-  - `REACT_APP_ALCHEMY_ID = 'yourAlchemyApiKey'`
-  - `GENERATE_SOURCEMAP=false`
+- install dependencies `npm i`
+- `cp .env.sample .env;`
+- Within .env replace the REACT_APP_ALCHEMY_ID variable 'yourAlchemyApiKey' with an Alchemy Key by visiting the [Alchemy Dashboard](https://alchemy.com/?r=zU2MTQwNTU5Mzc2M). Either "View Key" for an existing Polygon Mumbai Network app or create a key by selecting the "+ Create App" button. Use Chain: Polygon, Network: Polygon Mumbai. Then "View Key" and replace the API Key in your .env file.
 - If you've created your own GuestBook contract, update your App.js file at `contractAddress` with your contract address
 - `npm start`
+
+### Known Issues with Rainbowkit
+
+1. Rainbowkit Wallet Connection (modal) stays at pending even when Wallet is connected https://github.com/rainbow-me/rainbowkit/issues/935
+2. Rainbowkit Wallet Connection disconnect feature with Metamask https://github.com/rainbow-me/rainbowkit/issues/807 https://github.com/wagmi-dev/wagmi/issues/1239
 
 ## Deploy to Vercel
 - `git add .`
